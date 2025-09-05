@@ -68,40 +68,6 @@ export default function Home() {
         </View>
 
         <View className="bg-white rounded-lg p-6 mb-6 shadow-sm">
-          <Text className="text-2xl font-bold mb-4 text-green-700">
-            🚀 Key Advantages of React Native
-          </Text>
-          
-          <View className="mb-4">
-            <Text className="text-lg font-semibold mb-2 text-gray-800">1. Cost-Effective Development</Text>
-            <Text className="text-gray-600 mb-3 leading-6">
-              One codebase for both iOS and Android reduces development time and costs by up to 50%.
-            </Text>
-          </View>
-
-          <View className="mb-4">
-            <Text className="text-lg font-semibold mb-2 text-gray-800">2. Fast Development Cycle</Text>
-            <Text className="text-gray-600 mb-3 leading-6">
-              Hot reloading and live reloading enable instant previews of changes, speeding up development.
-            </Text>
-          </View>
-
-          <View className="mb-4">
-            <Text className="text-lg font-semibold mb-2 text-gray-800">3. Native Performance</Text>
-            <Text className="text-gray-600 mb-3 leading-6">
-              Apps run with native performance as React Native renders using native components.
-            </Text>
-          </View>
-
-          <View className="mb-4">
-            <Text className="text-lg font-semibold mb-2 text-gray-800">4. Strong Community Support</Text>
-            <Text className="text-gray-600 mb-3 leading-6">
-              Large ecosystem with thousands of libraries and active community support.
-            </Text>
-          </View>
-        </View>
-
-        <View className="bg-white rounded-lg p-6 mb-6 shadow-sm">
           <Text className="text-2xl font-bold mb-4 text-blue-700">
             💡 Why Choose React Native?
           </Text>
