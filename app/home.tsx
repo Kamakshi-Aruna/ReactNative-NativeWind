@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -34,8 +34,15 @@ export default function Home() {
   };
 
   return (
-    <ScrollView className="flex-1 bg-blue-50">
-      <View className="px-6 py-8">
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#eff6ff' }}>
+      <ScrollView 
+        style={{ flex: 1 }}
+        contentContainerStyle={{ paddingHorizontal: 24, paddingVertical: 32, minHeight: '100%' }}
+        showsVerticalScrollIndicator={true}
+        bounces={true}
+        scrollEnabled={true}
+        nestedScrollEnabled={true}
+      >
         <Text className="text-4xl font-bold text-center mb-4 text-blue-800">
           Welcome{userName ? `, ${userName}` : ''}!
         </Text>
@@ -60,6 +67,74 @@ export default function Home() {
           <Text className="text-gray-600 mb-4">• Rich ecosystem</Text>
         </View>
 
+        <View className="bg-white rounded-lg p-6 mb-6 shadow-sm">
+          <Text className="text-2xl font-bold mb-4 text-green-700">
+            🚀 Key Advantages of React Native
+          </Text>
+          
+          <View className="mb-4">
+            <Text className="text-lg font-semibold mb-2 text-gray-800">1. Cost-Effective Development</Text>
+            <Text className="text-gray-600 mb-3 leading-6">
+              One codebase for both iOS and Android reduces development time and costs by up to 50%.
+            </Text>
+          </View>
+
+          <View className="mb-4">
+            <Text className="text-lg font-semibold mb-2 text-gray-800">2. Fast Development Cycle</Text>
+            <Text className="text-gray-600 mb-3 leading-6">
+              Hot reloading and live reloading enable instant previews of changes, speeding up development.
+            </Text>
+          </View>
+
+          <View className="mb-4">
+            <Text className="text-lg font-semibold mb-2 text-gray-800">3. Native Performance</Text>
+            <Text className="text-gray-600 mb-3 leading-6">
+              Apps run with native performance as React Native renders using native components.
+            </Text>
+          </View>
+
+          <View className="mb-4">
+            <Text className="text-lg font-semibold mb-2 text-gray-800">4. Strong Community Support</Text>
+            <Text className="text-gray-600 mb-3 leading-6">
+              Large ecosystem with thousands of libraries and active community support.
+            </Text>
+          </View>
+        </View>
+
+        <View className="bg-white rounded-lg p-6 mb-6 shadow-sm">
+          <Text className="text-2xl font-bold mb-4 text-blue-700">
+            💡 Why Choose React Native?
+          </Text>
+          
+          <View className="mb-4">
+            <Text className="text-lg font-semibold mb-2 text-gray-800">For Startups</Text>
+            <Text className="text-gray-600 mb-3 leading-6">
+              Perfect for rapid prototyping and MVP development. Get to market faster with limited resources.
+            </Text>
+          </View>
+
+          <View className="mb-4">
+            <Text className="text-lg font-semibold mb-2 text-gray-800">For Enterprises</Text>
+            <Text className="text-gray-600 mb-3 leading-6">
+              Trusted by Facebook, Instagram, Airbnb, and Tesla. Proven scalability for large applications.
+            </Text>
+          </View>
+
+          <View className="mb-4">
+            <Text className="text-lg font-semibold mb-2 text-gray-800">For Developers</Text>
+            <Text className="text-gray-600 mb-3 leading-6">
+              Use familiar React skills to build mobile apps. Easy transition from web to mobile development.
+            </Text>
+          </View>
+
+          <View className="bg-blue-50 rounded-lg p-4 mt-4">
+            <Text className="text-blue-800 font-semibold mb-2">🎯 Perfect Use Cases:</Text>
+            <Text className="text-blue-700">• Social media apps • E-commerce platforms</Text>
+            <Text className="text-blue-700">• Productivity tools • Content delivery apps</Text>
+            <Text className="text-blue-700">• Real-time chat apps • Educational platforms</Text>
+          </View>
+        </View>
+
         <TouchableOpacity
           className="w-full bg-red-500 py-3 rounded-lg"
           onPress={handleLogout}
@@ -68,7 +143,7 @@ export default function Home() {
             Logout
           </Text>
         </TouchableOpacity>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
