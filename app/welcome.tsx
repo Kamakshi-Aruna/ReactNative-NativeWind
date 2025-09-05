@@ -18,9 +18,9 @@ export default function Welcome() {
           Build amazing mobile apps with the power of React
         </Text>
         
-        <View className="w-full space-y-4">
+        <View className="w-full">
           <TouchableOpacity
-            className="w-full bg-white py-3 rounded-lg shadow-lg"
+            className="w-full bg-white py-3 rounded-lg shadow-lg mb-6"
             onPress={() => router.push('/signup')}
           >
             <Text className="text-blue-600 text-center font-semibold text-lg">
