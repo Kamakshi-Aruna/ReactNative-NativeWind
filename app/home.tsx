@@ -35,15 +35,8 @@ export default function Home() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#eff6ff' }}>
-      <ScrollView 
-        style={{ flex: 1 }}
-        contentContainerStyle={{ paddingHorizontal: 24, paddingVertical: 32, minHeight: '100%' }}
-        showsVerticalScrollIndicator={true}
-        bounces={true}
-        scrollEnabled={true}
-        nestedScrollEnabled={true}
-      >
-        <Text className="text-4xl font-bold text-center mb-4 text-blue-800">
+      <View className="flex-1 px-4">
+        <Text className="text-4xl font-bold text-center mb-4 text-blue-800 mt-8">
           Welcome{userName ? `, ${userName}` : ''}!
         </Text>
         
@@ -85,20 +78,6 @@ export default function Home() {
               Trusted by Facebook, Instagram, Airbnb, and Tesla. Proven scalability for large applications.
             </Text>
           </View>
-
-          <View className="mb-4">
-            <Text className="text-lg font-semibold mb-2 text-gray-800">For Developers</Text>
-            <Text className="text-gray-600 mb-3 leading-6">
-              Use familiar React skills to build mobile apps. Easy transition from web to mobile development.
-            </Text>
-          </View>
-
-          <View className="bg-blue-50 rounded-lg p-4 mt-4">
-            <Text className="text-blue-800 font-semibold mb-2">🎯 Perfect Use Cases:</Text>
-            <Text className="text-blue-700">• Social media apps • E-commerce platforms</Text>
-            <Text className="text-blue-700">• Productivity tools • Content delivery apps</Text>
-            <Text className="text-blue-700">• Real-time chat apps • Educational platforms</Text>
-          </View>
         </View>
 
         <TouchableOpacity
@@ -109,7 +88,7 @@ export default function Home() {
             Logout
           </Text>
         </TouchableOpacity>
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 }
